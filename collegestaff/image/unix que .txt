@@ -1,0 +1,31 @@
+questions of 6/7 marks 
+------------------------------------------------------
+1. features of unix os ?  - IMP
+2. system structure of unix os ? - IMP
+3. what is shell and its features ? - IMP
+4. what is kernel or architecture of unix os ? - IMP
+5. what is file system structure and its features ? - IMP
+6. what is booting sequence and init process ? - IMP
+7. explain berifly file access permission ? - IMP
+8. what is vim or vi editor ? explain in details ? - IMP
+9. explain Arithmetic expression evaluation ?
+10. what is Shell’s interpretation at prompt ? - IMP
+11. explain shell metacharacter ?
+12. explain control structure in unix os ? - IMP
+13. what is process status ? explain it ?
+14. what do you mean of grep (utility)command ? - IMP
+15. what is sed utility ? - IMP
+16. explain awk utility ? - IMP
+17. explain write, wall,mesg command ? - IMP
+18. explain mail,motd, news command ?  - IMP
+19. what is file system componets ?
+------------------------------------------------------
+questions of 2 marks
+
+1. what is variable ? and its type ?
+2. what is argument processing ? - IMP
+3. types of  MECHANISM OF PROCESS CREATION ? - IMP
+4. difference b/w wait or not wait ? - IMP
+5. explain head and tail command ? - IMP
+6. explain i-node block ?
+

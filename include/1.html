@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trending Navigation Bar with Automatic Slider</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  overflow-x: hidden;
+}
+
+/* Navbar Styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background-color: #0B2E33;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  color: white;
+}
+
+.logo a {
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #B8E3E9;
+}
+
+/* Underline Animation */
+.nav-links li a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #B8E3E9;
+  left: 0;
+  bottom: -5px;
+  transition: width 0.3s ease;
+}
+
+.nav-links li a:hover::after {
+  width: 100%;
+}
+
+/* Hover Animation */
+.nav-links li a:hover {
+  animation: bounce 0.5s ease;
+}
+
+/* Keyframes */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Slider Styling */
+.slider {
+  position: relative;
+  margin-top: 80px; /* Push slider below navbar */
+  overflow: hidden;
+  width: 100%;
+  height: 500px;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 500%;
+}
+
+.slide {
+  min-width: 100%;
+  height: 500px;
+  background-size: cover;
+  background-position: center;
+}
+
+.slide1 {
+  background-image: url('https://via.placeholder.com/1200x500/FF5733/ffffff?text=Slide+1');
+}
+
+.slide2 {
+  background-image: url('https://via.placeholder.com/1200x500/33C4FF/ffffff?text=Slide+2');
+}
+
+.slide3 {
+  background-image: url('https://via.placeholder.com/1200x500/75FF33/ffffff?text=Slide+3');
+}
+  </style>
+</head>
+<body>
+  <!-- Navigation Bar >
+  <nav class="navbar">
+    <div class="logo">
+      <a href="#">MyLogo</a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">School</a></li>
+      <li><a href="#services">College</a></li>
+      <li><a href="#portfolio">Hostel</a></li>
+      <li><a href="#contact">About Us</a></li>
+      <li><a href="#contact">Contact Us</a></li>
+    </ul>
+  </nav-->
+
+  <!-- Slider -->
+  <div class="slider">
+    <div class="slides">
+      <div class="slide slide1"></div>
+      <div class="slide slide2"></div>
+      <div class="slide slide3"></div>
+    </div>
+  </div>
+
+  <script>
+    let currentSlide = 0;
+
+    function autoSlide() {
+      const slides = document.querySelector('.slides');
+      const totalSlides = slides.children.length;
+      currentSlide = (currentSlide + 1) % totalSlides;
+      slides.style.transform = `translateX(-${currentSlide * 100}%)`;
+    }
+
+    // Change slide every 3 seconds
+    setInterval(autoSlide, 3000);
+  </script>
+</body>
+</html>
