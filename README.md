@@ -1,6 +1,6 @@
 #  Campus Management System
 
-## 📖 Overview
+##  Overview
 
 Campus Management System is a web-based application developed to manage School, College, and Hostel operations from a single platform. The system provides separate dashboards for administrators, staff members, faculty members, students, parents, and hostel management.
 
@@ -138,13 +138,7 @@ http://localhost/campus_management
 
 ---
 
-## 📸 Screenshots
-
-Project screenshots are available in the Screenshots folder.
-
----
-
-## 👩‍💻 Author
+##  Author
 
 **Sneha Vaghasiya**
 
@@ -154,7 +148,7 @@ VNSGU
 
 ---
 
-## 📄 License
+##  License
 
 This project is developed for educational and academic purposes only.
 
